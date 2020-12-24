@@ -1,5 +1,5 @@
 # docker-apple-silicon
-Working simple laravel docker [preview](https://docs.docker.com/docker-for-mac/apple-m1/) enviroment for apple silicon
+Working simple laravel docker ([preview])(https://docs.docker.com/docker-for-mac/apple-m1/) enviroment for apple silicon
 
 ## Images:
 * nginx
