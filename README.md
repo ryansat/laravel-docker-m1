@@ -10,3 +10,6 @@ Working simple laravel docker [(preview)](https://docs.docker.com/docker-for-mac
 ## Usage:
 * Clone your laravel application for the api folder
 * docker-compose up --build -d
+
+## Useful commands:
+* docker exec -it container_name bash (create bash session inside the container)
