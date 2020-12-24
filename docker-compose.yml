@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  webserver:
+    image: 'nginx:alpine'
+    volumes:
+      - './api:/var/www'
+      - './docker/nginx/conf.d/:/etc/nginx/conf.d/'
+    ports:
+      - '80:80'
+
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - './api:/var/www'
+    working_dir: /var/www
+
+  db:
+    image: 'mariadb'
+    ports:
+      - '3388:3306'
+    restart: unless-stopped
+    volumes:
+      - ./docker-volumes-data/db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: root
+
+  redis:
+    image: redis
+    volumes:
+      - './docker-volumes-data/redis:/data'
