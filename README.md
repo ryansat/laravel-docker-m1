@@ -6,3 +6,7 @@ Working simple laravel docker (preview) enviroment for apple silicon
 * php 8.0
 * mariaDB (mysql is not supported yet)
 * redis
+
+## Usage:
+* Clone your laravel application for the api folder
+* docker-compose up --build -d
