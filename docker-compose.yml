@@ -20,7 +20,7 @@ services:
   db:
     image: 'mariadb'
     ports:
-      - '3388:3306'
+      - '3306:3306'
     restart: unless-stopped
     volumes:
       - ./docker-volumes-data/db:/var/lib/mysql
