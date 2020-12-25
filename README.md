@@ -8,6 +8,7 @@ Working simple laravel docker [(preview)](https://docs.docker.com/docker-for-mac
 * redis
 
 ## Usage:
+* create db and redis folder under docker-volumes-data folder
 * Clone your laravel application under api folder
 * docker-compose up --build -d
 
